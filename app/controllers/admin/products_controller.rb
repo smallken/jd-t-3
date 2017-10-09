@@ -3,7 +3,7 @@ class Admin::ProductsController < ApplicationController
 
   before_action :authenticate_user!
   before_action :admin_required
-  
+
   def new
     @product = Product.new
   end
@@ -37,6 +37,6 @@ class Admin::ProductsController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:title, :price, :description, :quantity)
+    params.require(:product).permit(:title, :price, :description, :quantity, :image)
   end
 end
