@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   resources :carts do
     collection do
       delete :clean
+      post :checkout
     end
   end
 
@@ -23,4 +24,6 @@ Rails.application.routes.draw do
       post :delete
     end
   end
+
+  resources :orders
 end
